@@ -34,9 +34,9 @@ class _LoginScreenState extends State<LoginScreen> {
             height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
-                color: HexColor("99000000"),
+                color: HexColor("000000"),
                 image: DecorationImage(
-                    colorFilter: new ColorFilter.mode(Colors.white.withOpacity(0.4), BlendMode.dstATop),
+                    colorFilter: new ColorFilter.mode(Colors.black12.withOpacity(0.4), BlendMode.dstATop),
                     image: AssetImage("images/foodie_startup_bg.png"),
                     fit: BoxFit.cover
                 )
@@ -68,7 +68,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   //TextField Username
                   Padding(
                     padding: EdgeInsets.only(top: ScreenUtil.instance.setHeight(40.0),
-                        left: ScreenUtil.instance.setWidth(15.0), right: 15.0),
+                        left: ScreenUtil.instance.setWidth(15.0), right: ScreenUtil.instance.setWidth(15.0)),
                     child: TextFormField(
                       decoration: InputDecoration(
                           enabledBorder: const OutlineInputBorder(
@@ -86,7 +86,8 @@ class _LoginScreenState extends State<LoginScreen> {
 
                   //TextField password
                   Padding(
-                    padding: const EdgeInsets.only(top: 10.0, left: 15.0, right: 15.0),
+                    padding: EdgeInsets.only(top: ScreenUtil.instance.setHeight(10.0),
+                        left: ScreenUtil.instance.setWidth(15.0), right: ScreenUtil.instance.setWidth(15.0)),
                     child: TextFormField(
                       decoration: InputDecoration(
                           enabledBorder: const OutlineInputBorder(
@@ -113,7 +114,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
                       Padding(
-                        padding: const EdgeInsets.only(top: 10.0, left: 15.0),
+                        padding:  EdgeInsets.only(top: ScreenUtil.instance.setHeight(10.0), left: ScreenUtil.instance.setWidth(15.0)),
                         child: ButtonTheme(
                           minWidth: 150,
                           child: OutlineButton(
@@ -121,13 +122,13 @@ class _LoginScreenState extends State<LoginScreen> {
                             child: Text("LOGIN", style: TextStyle(color: Colors.white, fontFamily: "lgc"),),
                             focusColor: HexColor("FB8C00"),
                             hoverColor: HexColor("FB8C00"),
-                            borderSide: const BorderSide(color: Colors.orange, width: 2.0, style: BorderStyle.solid),
+                            borderSide: const BorderSide(color: Colors.orange, width: 2.5, style: BorderStyle.solid),
                           ),
                         ),
                       ),
 
                       Padding(
-                        padding: const EdgeInsets.only(top: 10.0, left: 15.0),
+                        padding: EdgeInsets.only(top: ScreenUtil.instance.setHeight(10.0), left: ScreenUtil.instance.setWidth(15.0)),
                         child: ButtonTheme(
                           minWidth: 150,
                           child: MaterialButton(
@@ -141,7 +142,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
 
                   Padding(
-                    padding: const EdgeInsets.only(top: 10.0, left: 15.0, right: 15.0),
+                    padding: EdgeInsets.only(top: ScreenUtil.instance.setHeight(10.0),
+                        left: ScreenUtil.instance.setWidth(15.0), right: ScreenUtil.instance.setWidth(15.0)),
                     child: ButtonTheme(
                       minWidth: 350,
                       child: MaterialButton(
